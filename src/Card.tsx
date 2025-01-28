@@ -84,6 +84,9 @@ const Card: React.FC<IProps> = ({
               src={links?.mission_patch_small || links?.mission_patch}
               alt={mission_name}
               className="w-full h-auto rounded-lg"
+              onError={(e) => {
+                (e.target as HTMLImageElement).style.display = "none"; 
+              }}
             />
           </div>
         </div>
