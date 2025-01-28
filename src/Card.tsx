@@ -81,7 +81,7 @@ const Card: React.FC<IProps> = ({
           </div>
           <div className="w-1/4 pl-4">
             <img
-              src={links.mission_patch_small}
+              src={links?.mission_patch_small || links?.mission_patch}
               alt={mission_name}
               className="w-full h-auto rounded-lg"
             />
