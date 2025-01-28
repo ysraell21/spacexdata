@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const images = import.meta.glob('/src/assets/*.{png,jpg,jpeg}');
+// const images = import.meta.glob('/src/assets/*.{png,jpg,jpeg}');
 
 interface IProps {
   flight_number: number;
@@ -31,9 +31,9 @@ const Card: React.FC<IProps> = ({
     }));
   };
 
-  const imagePath = Object.keys(images).find((path) =>
-    path.includes(mission_name.replace(/\s+/g, ""))
-  );
+  // const imagePath = Object.keys(images).find((path) =>
+  //   path.includes(mission_name.replace(/\s+/g, ""))
+  // );
 
   return (
     <div className="bg-[rgb(14,36,67)] p-5 mb-5 border border-gray-600 rounded-lg shadow-sm">
@@ -81,7 +81,7 @@ const Card: React.FC<IProps> = ({
           </div>
           <div className="w-1/4 pl-4">
             <img
-              src={imagePath || links.mission_patch_small}
+              src={links.mission_patch_small}
               alt={mission_name}
               className="w-full h-auto rounded-lg"
             />
